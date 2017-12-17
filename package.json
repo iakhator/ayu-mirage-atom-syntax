@@ -59,5 +59,5 @@
     "url": "git+https://github.com/iakhator/ayu-mirage-atom-syntax.git"
   },
   "theme": "syntax",
-  "version": "0.2.1"
+  "version": "0.3.0"
 }

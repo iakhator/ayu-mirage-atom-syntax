@@ -50,7 +50,7 @@
     "theme"
   ],
   "license": "MIT",
-  "name": "ayu",
+  "name": "ayu-mirage-atom-syntax",
   "optionalDependencies": {},
   "readme": "# ayu theme\n\nA short description of your theme.\n\n![A screenshot of your theme](https://f.cloud.github.com/assets/69169/2289498/4c3cb0ec-a009-11e3-8dbd-077ee11741e5.gif)\n",
   "readmeFilename": "README.md",

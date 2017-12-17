@@ -39,7 +39,7 @@
     "url": "https://github.com/ColeTownsend/ayu-atom-syntax/issues"
   },
   "dependencies": {},
-  "description": "Converted version of the Ayu syntax theme for Sublime text",
+  "description": "The dark-light ayu-mirage theme",
   "devDependencies": {},
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

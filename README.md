@@ -1,7 +1,7 @@
 # Ayu Mirage Atom Syntax Theme
   ---
 
-AThis theme is based of on the Ayu Mirage Color Scheme by  @dempfi - [Ayu](https://github.com/dempfi/ayu) - Ayu.
+AThis theme is based of on the Ayu Mirage Color Scheme by  @dempfi - [Ayu](https://github.com/dempfi/ayu).
 I simply changed somethings to give it my custom feel
 
 ### Screenshots

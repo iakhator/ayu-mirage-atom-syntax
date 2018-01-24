@@ -1,5 +1,36 @@
-# ayu theme
+# Ayu Mirage Atom Syntax Theme
+  ---
 
-A short description of your theme.
+AThis theme is based of on the Ayu Mirage Color Scheme by  @dempfi - [Ayu](https://github.com/dempfi/ayu) - Ayu.
+I simply changed somethings to give it my custom feel
 
-![A screenshot of your theme](https://f.cloud.github.com/assets/69169/2289498/4c3cb0ec-a009-11e3-8dbd-077ee11741e5.gif)
+### Screenshots
+
+<h6 align='center'>Ayu Mirage Atom Syntax<code>html</code> files</h6>
+  
+![html](./screenshots/html.png)
+  
+  ---
+
+<h6 align='center'>Ayu Mirage Atom Syntax<code>css</code> files</h6>
+  
+![css](./screenshots/css.png)
+  
+  ---
+
+<h6 align='center'>Ayu Mirage Atom Syntax<code>js</code> files</h6>
+  
+![js](./screenshots/js.png)
+
+  ---
+
+## Install
+Install Ayu Mirage Atom Syntax Theme via Atom by going to [Preferences/Settings > Install > Theme] and search for Ayu Mirage Atom Syntax Theme or install through CLI
+
+`$ apm install ayu-mirage-atom-syntax`
+
+## UI Theme
+The Ui theme used in the screenshots is [Material UI](https://atom.io/themes/atom-material-ui) with a little tweak.
+
+  ---
+atom-ayu-ui coming soon ...

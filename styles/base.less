@@ -93,11 +93,10 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
   color: #5CCFE6;
 }
 .syntax--entity.syntax--name.syntax--module.syntax--js, .syntax--variable.syntax--import.syntax--parameter.syntax--js, .syntax--variable.syntax--other.syntax--class.syntax--js {
-  color: #5CCFE6;
+  color: #ffcc66;
 }
 
 .syntax--variable.syntax--language {
-  font-style: italic;
   color: #5CCFE6;
 }
 
@@ -116,6 +115,7 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
 
 .syntax--entity.syntax--other.syntax--attribute-name {
   color: #FFAE57;
+  font-style: italic;
 }
 
 .syntax--markup.syntax--inserted {
@@ -279,6 +279,14 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
 
 .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json), .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string) {
   color: #5CCFE6;
+}
+
+.syntax--meta.syntax--property-list.syntax--css .syntax--meta.syntax--property-value.syntax--css .syntax--variable.syntax--other.syntax--less, .syntax--meta.syntax--property-list.syntax--scss .syntax--variable.syntax--scss, .syntax--meta.syntax--property-list.syntax--sass .syntax--variable.syntax--sass, .syntax--keyword.syntax--operator.syntax--logical, .syntax--meta.syntax--property-list.syntax--scss .syntax--variable.syntax--scss, .syntax--meta.syntax--property-list.syntax--sass .syntax--variable.syntax--sass, .syntax--keyword.syntax--operator.syntax--logical, .syntax--keyword.syntax--operator.syntax--arithmetic, .syntax--keyword.syntax--operator.syntax--bitwise, .syntax--keyword.syntax--operator.syntax--increment, .syntax--keyword.syntax--operator.syntax--ternary, .syntax--keyword.syntax--operator.syntax--comparison, .syntax--keyword.syntax--operator.syntax--assignment, .syntax--keyword.syntax--operator.syntax--operator .syntax--keyword.syntax--operator.syntax--or.syntax--regexp, .syntax--punctuation.syntax--section.syntax--embedded.syntax--js, .syntax--punctuation.definintion.syntax--string, .syntax--punctuation{
+  font-style: normal;
+}
+
+.syntax--meta.syntax--import.syntax--ts .syntax--meta.syntax--block.syntax--ts .syntax--variable.syntax--other.syntax--readwrite.syntax--alias.syntax--ts .syntax--meta.syntax--import.syntax--tsx .syntax--meta.syntax--block.syntax--tsx, .syntax--variable.syntax--other.syntax--readwrite.syntax--alias.syntax--tsx, .syntax--meta.syntax--import.syntax--js .syntax--variable.syntax--other, .syntax--meta.syntax--export.syntax--ts .syntax--meta.syntax--block.syntax--ts .syntax--variable.syntax--other.syntax--readwrite.syntax--alias.syntax--ts, .syntax--meta.syntax--export.syntax--tsx .syntax--meta.syntax--block.syntax--tsx .syntax--variable.syntax--other.syntax--readwrite.syntax--alias.syntax--tsx, .syntax--meta.syntax--export.syntax--js .syntax--variable.syntax--other, .syntax--entity.syntax--name.syntax--function.syntax--ts, .syntax--entity.syntax--name.syntax--function.syntax--tsx, .syntax--support.syntax--type.syntax--primitive, .syntax--entity.syntax--other.syntax--attribute-name, .syntax--entity.syntax--name.syntax--tag.syntax--custom, .syntax--source.syntax--js.syntax--jsx .syntax--keyword.syntax--control.syntax--flow.syntax--js, .syntax--support.syntax--type.syntax--property.syntax--css, .syntax--support.syntax--function.syntax--basic_functions, .syntax--variable.syntax--assignment.syntax--coffee, .syntax--support.syntax--function.syntax--basic_functions, .syntax--keyword.syntax--operator.syntax--type.syntax--annotation, .syntax--punctuation.syntax--section.syntax--embedded, .syntax--assignment.syntax--coffee, .syntax--entity.syntax--name.syntax--type.syntax--ts, .syntax--support.syntax--constant.syntax--math, .syntax--meta.object-literal.syntax--key, .syntax--meta.syntax--var.syntax--expr .syntax--storage.syntax--type, .syntax--text.syntax--html.syntax--markdown, .syntax--parameter, .syntax--string, .syntax--italic, .syntax--quote, .syntax--keyword, .syntax--storage, .syntax--language, .syntax--type .syntax--function, .syntax--type.syntax--function, .syntax--storage.syntax--type.syntax--class, .syntax--type.syntax--var, .syntax--meta.syntax--parameter, .syntax--variable.syntax--parameter, .syntax--meta.syntax--parameters, .syntax--keyword.syntax--control, .syntax--modifier, .syntax--this, .syntax--comment{
+  font-style: italic;
 }
 
 .acejump.syntax--label.syntax--blue {

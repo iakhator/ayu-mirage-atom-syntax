@@ -130,10 +130,6 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
   color: #FFAE57;
 }
 
-.syntax--string.syntax--regexp, .syntax--constant.syntax--character.syntax--escape {
-  color: #95e6cb;
-}
-
 .syntax--url *,
 .syntax--link *,
 .syntax--uri * {
@@ -331,4 +327,16 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
 
 .syntax--gutter_color {
   color: #ffffff;
+}
+
+.syntax--string.syntax--regexp, .syntax--constant.syntax--character.syntax--escape {
+  color: #95e6cb;
+}
+
+.syntax--variable.syntax--other.syntax--property.syntax--js.syntax--jsx, .syntax--support.syntax--variable.syntax--property.syntax--dom.syntax--js.syntax--jsx {
+  color: #95e6cb;
+}
+
+.syntax--constant.syntax--numeric, .syntax--constant.syntax--language, .syntax--support.syntax--constant, .syntax--constant.syntax--character, .syntax--variable.syntax--parameter, .syntax--keyword.syntax--other.syntax--unit {
+  color: #D4BFFF
 }

@@ -65,6 +65,10 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
   color: #FFAE57;
 }
 
+.syntax--string, .syntax--constant.syntax--other.syntax--symbol {
+  color: #BAE67E;
+}
+
 .syntax--constant.syntax--other.syntax--color, .syntax--meta.syntax--tag, .syntax--punctuation.syntax--separator.syntax--inheritance.syntax--php, .syntax--punctuation.syntax--section.syntax--embedded, .syntax--keyword.syntax--other.syntax--substitution {
   color: #80D4FF;
 }
@@ -73,7 +77,37 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
   color: #5CCFE6;
 }
 
-.syntax--entity.syntax--name.syntax--function, .syntax--meta.syntax--function-call, .syntax--variable.syntax--function, .syntax--support.syntax--function, .syntax--keyword.syntax--other.syntax--special-method, .syntax--meta.syntax--block-level {
+
+.syntax--string.syntax--regexp, .syntax--constant.syntax--character.syntax--escape {
+  color: #95E6CB;
+}
+
+.syntax--constant.syntax--language {
+  color: #FFCC66;
+}
+
+.syntax--constant.syntax--character, .syntax--constant.syntax--other {
+  color: #FFCC66;
+}
+
+.syntax--variable.syntax--other.syntax--dollar.syntax--only.syntax--js, .syntax--variable.syntax--other.syntax--object.syntax--dollar.syntax--only.syntax--js, .syntax--variable.syntax--type.syntax--dollar.syntax--only.syntax--js, .syntax--support.syntax--class.syntax--dollar.syntax--only.syntax--js {
+  color: #FFC44C;
+}
+
+.syntax--storage {
+  color: #FFA759;
+}
+
+.syntax--storage.syntax--type {
+  color: #FFA759;
+  font-style: italic;
+}
+
+.syntax--entity.syntax--name.syntax--function {
+  color: #FFD580;
+}
+
+.syntax--markup.syntax--strike {
   color: #FFC44C;
 }
 
@@ -109,8 +143,20 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
   background-color: #FFAE57;
 }
 
+.syntax--meta.syntax--diff, .syntax--meta.syntax--diff.syntax--header {
+  color: #c594c5;
+}
+
+.syntax--source.syntax--ruby .syntax--variable.syntax--other.syntax--readwrite {
+  color: #FFD580;
+}
+
 .syntax--punctuation.syntax--definition.syntax--tag.syntax--end, .syntax--punctuation.syntax--definition.syntax--tag.syntax--begin, .syntax--punctuation.syntax--definition.syntax--tag {
   color: rgba(54, 163, 217, 0.56);
+}
+
+.syntax--constant.syntax--numeric.syntax--line-number.syntax--match {
+  color: #FFA759;
 }
 
 .syntax--entity.syntax--other.syntax--attribute-name {
@@ -164,12 +210,17 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
 
 .synytax--markup.syntax--italic {
   font-style: italic;
-  color: #F07178;
+  color: #F28779;
 }
 
 .syntax--markup.syntax--bold {
-  font-weight: normal;
-  color: #F07178;
+  font-weight: bold;
+  color: #F28779;
+}
+
+.syntax--markup.syntax--italic .syntax--markup.syntax--bold, .syntax--markup.syntax--bold .syntax--markup.syntax--italic {
+  font-weight: bold;
+  font-style: italic;
 }
 
 .syntax--markup.syntax--underline {
@@ -207,9 +258,10 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
   color: #5C6773;
 }
 
-.syntax--markdown.syntax--heading, .syntax--markup.syntax--heading, .syntax--markup.syntax--heading .syntax--entity.syntax--name, .syntax--markup.syntax--heading.syntax--markdown .syntax--punctuation.syntax--definition.syntax--heading.syntax--markdown {
-  color:#BAE67E;
+.syntax--string, .syntax--constant.syntax--other.syntax--symbol {
+  color: #BAE67E;
 }
+
 
 .syntax--markup.syntax--quote, .syntax--punctuation.syntax--definition.syntax--blockquote.syntax--markdown {
   font-style: italic;
@@ -241,48 +293,45 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
   background-color: rgba(255, 255, 255, 0.06);
 }
 
-.syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json), .syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string) {
+.syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json), .syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--punctuation.syntax--definition.syntax--string) {
   color: #5CCFE6;
 }
 
-.syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json), .syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string) {
-  color: #FFAE57;
-}
-
-.syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json), .syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string){
-  color: #F07178;
-}
-
-.syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json), .syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.meta .meta .meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string) {
-  color: #ffcc66;
-}
-
-.syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json), .syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.meta .meta .meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string) {
-  color: #ffcc66;
-}
-
-.syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json), .syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.meta .meta .meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string) {
+.syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json), .syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--punctuation.syntax--definition.syntax--string) {
   color: #5CCFE6;
 }
 
-.syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json), .syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.meta .meta .meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string) {
-  color: #FFE792;
-}
-
-.syntax--source.syntax--json .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json), .syntax--source.syntax--json .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.meta .meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string) {
+.syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json), .syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--punctuation.syntax--definition.syntax--string) {
   color: #5CCFE6;
 }
 
-.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.meta.structure.dictionary.json .meta.structure.dictionary.value.json .string.quoted.double.json), .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.meta.structure.dictionary.json .meta.structure.dictionary.value.json .punctuation.definition.string) {
+.syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json), .syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--punctuation.syntax--definition.syntax--string) {
   color: #5CCFE6;
 }
 
-.syntax--meta.syntax--property-list.syntax--css .syntax--meta.syntax--property-value.syntax--css .syntax--variable.syntax--other.syntax--less, .syntax--meta.syntax--property-list.syntax--scss .syntax--variable.syntax--scss, .syntax--meta.syntax--property-list.syntax--sass .syntax--variable.syntax--sass, .syntax--keyword.syntax--operator.syntax--logical, .syntax--meta.syntax--property-list.syntax--scss .syntax--variable.syntax--scss, .syntax--meta.syntax--property-list.syntax--sass .syntax--variable.syntax--sass, .syntax--keyword.syntax--operator.syntax--logical, .syntax--keyword.syntax--operator.syntax--arithmetic, .syntax--keyword.syntax--operator.syntax--bitwise, .syntax--keyword.syntax--operator.syntax--increment, .syntax--keyword.syntax--operator.syntax--ternary, .syntax--keyword.syntax--operator.syntax--comparison, .syntax--keyword.syntax--operator.syntax--assignment, .syntax--keyword.syntax--operator.syntax--operator .syntax--keyword.syntax--operator.syntax--or.syntax--regexp, .syntax--punctuation.syntax--section.syntax--embedded.syntax--js, .syntax--punctuation.definintion.syntax--string, .syntax--punctuation{
-  font-style: normal;
+.syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json), .syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--punctuation.syntax--definition.syntax--string) {
+  color: #5CCFE6;
 }
 
-.syntax--meta.syntax--import.syntax--ts .syntax--meta.syntax--block.syntax--ts .syntax--variable.syntax--other.syntax--readwrite.syntax--alias.syntax--ts .syntax--meta.syntax--import.syntax--tsx .syntax--meta.syntax--block.syntax--tsx, .syntax--variable.syntax--other.syntax--readwrite.syntax--alias.syntax--tsx, .syntax--meta.syntax--import.syntax--js .syntax--variable.syntax--other, .syntax--meta.syntax--export.syntax--ts .syntax--meta.syntax--block.syntax--ts .syntax--variable.syntax--other.syntax--readwrite.syntax--alias.syntax--ts, .syntax--meta.syntax--export.syntax--tsx .syntax--meta.syntax--block.syntax--tsx .syntax--variable.syntax--other.syntax--readwrite.syntax--alias.syntax--tsx, .syntax--meta.syntax--export.syntax--js .syntax--variable.syntax--other, .syntax--entity.syntax--name.syntax--function.syntax--ts, .syntax--entity.syntax--name.syntax--function.syntax--tsx, .syntax--support.syntax--type.syntax--primitive, .syntax--entity.syntax--other.syntax--attribute-name, .syntax--entity.syntax--name.syntax--tag.syntax--custom, .syntax--source.syntax--js.syntax--jsx .syntax--keyword.syntax--control.syntax--flow.syntax--js, .syntax--support.syntax--type.syntax--property.syntax--css, .syntax--support.syntax--function.syntax--basic_functions, .syntax--variable.syntax--assignment.syntax--coffee, .syntax--support.syntax--function.syntax--basic_functions, .syntax--keyword.syntax--operator.syntax--type.syntax--annotation, .syntax--punctuation.syntax--section.syntax--embedded, .syntax--assignment.syntax--coffee, .syntax--entity.syntax--name.syntax--type.syntax--ts, .syntax--support.syntax--constant.syntax--math, .syntax--meta.object-literal.syntax--key, .syntax--meta.syntax--var.syntax--expr .syntax--storage.syntax--type, .syntax--text.syntax--html.syntax--markdown, .syntax--parameter, .syntax--string, .syntax--italic, .syntax--quote, .syntax--keyword, .syntax--storage, .syntax--language, .syntax--type .syntax--function, .syntax--type.syntax--function, .syntax--storage.syntax--type.syntax--class, .syntax--type.syntax--var, .syntax--meta.syntax--parameter, .syntax--variable.syntax--parameter, .syntax--meta.syntax--parameters, .syntax--keyword.syntax--control, .syntax--modifier, .syntax--this, .syntax--comment{
-  font-style: italic;
+.syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json), .syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--punctuation.syntax--definition.syntax--string) {
+  color: #5CCFE6;
+}
+
+.syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json), .syntax--source.syntax--json .syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.syntax--meta .syntax--meta .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--punctuation.syntax--definition.syntax--string) {
+  color: #5CCFE6;
+}
+
+.syntax--source.syntax--json .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json), .syntax--source.syntax--json .syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.syntax--meta .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--punctuation.syntax--definition.syntax--string) {
+  color: #5CCFE6;
+}
+
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json:not(.syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--string.syntax--quoted.syntax--double.syntax--json), .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--punctuation.syntax--definition.syntax--string:not(.syntax--meta.syntax--structure.syntax--dictionary.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--value.syntax--json .syntax--punctuation.syntax--definition.syntax--string) {
+  color: #5CCFE6;
+}
+
+.syntax--markup.syntax--heading {
+  font-weight: bold;
+  color: #FFA759;
 }
 
 .acejump.syntax--label.syntax--blue {
@@ -339,4 +388,25 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
 
 .syntax--constant.syntax--numeric, .syntax--constant.syntax--language, .syntax--support.syntax--constant, .syntax--constant.syntax--character, .syntax--variable.syntax--parameter, .syntax--keyword.syntax--other.syntax--unit {
   color: #D4BFFF
+}
+
+.syntax--variable.syntax--language {
+  color: #FFAE57;
+}
+
+.syntax--storage {
+  color: #FFA759;
+  font-style: italic;
+}
+
+.syntax--storage.syntax--type {
+  color: #FFA759;
+}
+
+.syntax--keyword:not(.syntax--keyword.syntax--operator), .syntax--keyword.syntax--operator.syntax--word {
+  color: #FFA759;
+}
+
+.syntax--keyword.syntax--operator {
+  color: #F29E74;
 }
